@@ -1,86 +1,57 @@
-# 🏡 Machine Learning Lab 1: Linear Regression  
+# Capstone Project: Predicting Diabetes Progression with Regression Analysis  
 
-📌 **GitHub Repo:** [Applied ML Prince](https://github.com/don4ye/applied-ml-prince)  
-👤 **Author:** Prince  
-📅 **Date:** 03/11/2025  
-🎯 **Objective:** Predict California house prices using **Median Income (`MedInc`)** and **Average Rooms (`AveRooms`)**.
-
----
-
-## 📂 Project Overview  
-
-Businesses and organizations often need to understand relationships between different factors to make better decisions.  
-Regression analysis helps identify and quantify these relationships, providing insights for **forecasting and decision-making**.  
-
-This project demonstrates **regression modeling techniques** applied to a real-world dataset:  
-✅ **Dataset:** **California Housing Prices** (Scikit-learn's `fetch_california_housing`)  
-✅ **Goal:** Predict home values based on features like **income level** and **average rooms per household**.  
-
----
-
-## 🚀 Steps Followed  
-
-✅ **1. Load & Explore Dataset**  
-✅ **2. Data Visualization (Histograms, Boxplots, Scatter Plots)**  
-✅ **3. Feature Selection (`MedInc` and `AveRooms`)**  
-✅ **4. Train/Test Split (80% Training, 20% Testing)**  
-✅ **5. Train a Linear Regression Model**  
-✅ **6. Evaluate Performance (R², MAE, RMSE)**  
-✅ **7. Save the Trained Model (`linear_regression_model.pkl`)**  
-
----
-
-## 📊 Results  
-
-📌 **Model Performance Metrics:**  
-
-| Metric  | Value |
-|---------|-------|
-| **R² Score** | 0.46 |
-| **Mean Absolute Error (MAE)** | 0.6247 |
-| **Root Mean Squared Error (RMSE)** | 0.8379 |
-
-- **R² = 0.46** → The model explains **46% of the variance** in house prices.  
-- **Lower RMSE (0.84) and MAE (0.62)** indicate that predictions are somewhat close but can be improved.  
-
----
-
-## 📌 Dataset  
-
-### **California Housing Dataset**  
-We use the built-in **Scikit-learn dataset**:  
-
-```python
-from sklearn.datasets import fetch_california_housing
-
-data = fetch_california_housing(as_frame=True)
-data_frame = data.frame
+**Author:** Mhamed  
+**Date:** 04, 22, 2025 
 
 
-## 🔧 How to Run This Project  
+## Project Files:
+* [Dataset: diabtes.csv] (https://github.com/Mhamedben/Capstone_Project1/blob/main/diabetes.csv)
 
-### 1️⃣ Clone the Repository  
-```bash
-git clone https://github.com/don4ye/applied-ml-prince.git
-cd applied-ml-prince
 
-### 2️⃣ Install Dependencies  
-```bash
-pip install -r requirements.txt
+* [Jupyter Notebook: predicting_diabtes_progression.ipynb] (https://github.com/Mhamedben/Capstone_Project1/blob/main/predicting_diabetes_progression.ipynb)
 
-### 3️⃣ Open Jupyter Notebook  
-```bash
-jupyter notebook
+## Instructions on how to set up your virtual environment and run your notebook locally:
 
-## 📁 Files Included  
+To run this notebook on your own computer: 
+1. Clone the Repository:
 
-| File | Description |
-|------|------------|
-| **ml01.ipynb** | Jupyter Notebook with all analysis and model training. |
-| **linear_regression_model.pkl** | Saved trained model for future use. |
-| **README.md** | This project documentation. |
-| **requirements.txt** | List of required Python packages. |
+git clone: https://github.com/Mhamedben/applied-ml-mhamed/blob/main/ML_RegressionMM/REGRESSION_PROJECT_Mhamed.ipynb.md
 
-## 🔗 GitHub Repository  
+2. Create a Virtual Environment:
+python -m venv .venv
 
-📌 **[Applied ML Prince](https://github.com/don4ye/applied-ml-prince)**
+3. Activate the Virtual Environment:
+For windows: .\.venv\Scripts\activate
+On macOS/Linux: .venv/bin/activate
+ 
+## Introduction
+Diabetes is a chronic medical condition that affects millions of people around the world and significantly impacts quality of life. According to the 2021 report of the International Diabetes Federation (IDF), approximately 537 million people worldwide were living with diabetes~\cite{website01}. Early prediction of disease progression is crucial for effective treatment planning and improved patient outcomes.
+This project aims to develop a predictive model for diabetes progression using baseline clinical features such as age, sex, body mass index (BMI), blood pressure, and blood serum measurements. By applying regression analysis, the study seeks to identify key factors that influence disease progression and build a reliable model capable of forecasting future disease states.
+
+## Section 1. Import and Inspect the Data
+   - Load the dataset and display the first 10 rows.
+   - Check for missing values and display summary statistics
+    
+## Section 2. Data Exploration and Preparation
+   - Explore data patterns and distributions
+   - Create histograms, boxplots, Scatter plots and count plots for categorical variables
+   - Handle missing values and clean data
+   - Correlation heatmap to explore feature relationships
+     
+## Section 3. Feature Selection and Justification
+   - Choose Features and Target
+   - Define X and y
+   - Reflection 3: Why did you choose these features? How might they impact predictions or accuracy?
+
+## Section 4. Feature Selection via Backward Elimination in OLS Regression
+   - Split the data into training and test sets using train_test_split
+   - Train model using Scikit-Learn model.fit() method.
+   - Backward Elimination process
+   - Summary of final model
+   - Evaluate on Test Set
+
+## Section 5. Check for Multicollinearity
+   - Lasso (L1 Regularization) 
+   - Ridge (L2 Regularization)
+   - Compare performance of all models across the same performance metrics
+
