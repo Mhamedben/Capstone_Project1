@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Capstone Project: Predicting Diabetes Progression with Regression Analysis  
 
 **Author:** Mhamed  
@@ -54,8 +53,4 @@ This project aims to develop a predictive model for diabetes progression using b
 ## Section 5. Check for Multicollinearity
    - Lasso (L1 Regularization) 
    - Ridge (L2 Regularization)
-   - Compare performance of all models across the same performance metrics
-
-=======
-
->>>>>>> d77944bbecb910171e1ebfcc9ee31613cf23fa5b
+   - Compare performance of all models across the same performance metrics.
